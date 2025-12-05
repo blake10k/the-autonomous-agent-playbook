@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autonomous AI Agent SOP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f0f9ff;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 320px;
+            max-height: 400px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 400px;
+            }
+        }
+        .info-card {
+            background-color: white;
+            border-radius: 0.75rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+        }
+        .flow-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            padding: 1rem;
+        }
+        .flow-arrow {
+            font-size: 2rem;
+            color: #0077B6;
+            margin: 0.5rem 0;
+        }
+        @media (min-width: 768px) {
+            .flow-step {
+                flex: 1;
+            }
+            .flow-arrow {
+                margin: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+    <header class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+            <h1 class="text-3xl font-bold leading-tight text-center text-[#0077B6]">
+                The Autonomous Agent Playbook
+            </h1>
+            <p class="text-lg text-slate-600 text-center mt-2">
+                A Developer's Standard Operating Procedure for Building Function-Executing AI
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-4 md:p-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div class="info-card md:col-span-2">
+                <h2 class="text-2xl font-semibold text-[#0077B6] mb-3">What is an Autonomous Agent?</h2>
+                <p class="text-slate-600">
+                    An autonomous AI agent is a system that perceives its environment, makes decisions, and executes functions to achieve specific goals without direct human intervention. Unlike simple models, agents operate in a continuous loop, learning and adapting to new information. They bridge the gap between digital reasoning and real-world action by autonomously calling tools, APIs, and other functions.
+                </p>
+            </div>
+            <div class="info-card flex flex-col justify-center items-center text-center bg-[#0077B6] text-white">
+                <h3 class="text-lg font-semibold text-[#CAF0F8]">Key Capability</h3>
+                <div class="text-6xl font-bold my-2">70%</div>
+                <p class="text-base text-[#ADE8F4]">
+                    Of developers believe autonomous function execution is the key differentiator for next-generation AI applications.
+                </p>
+            </div>
+        </div>
+
+        <div class="info-card">
+            <h2 class="text-2xl font-semibold text-[#0077B6] mb-4 text-center">Core Agent Architecture: Systems Required</h2>
+            <p class="text-slate-600 text-center mb-6 max-w-3xl mx-auto">
+                The agent's "mind" operates in a continuous cycle. Understanding this architecture is the first step in identifying the systems required for its development. This loop is the core of its autonomy.
+            </p>
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 md:space-x-4">
+                <div class="flow-step">
+                    <div class="w-20 h-20 bg-[#CAF0F8] rounded-full flex items-center justify-center border-2 border-[#00B4D8]">
+                        <span class="text-3xl">📥</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mt-2 text-[#0077B6]">1. Perception</h3>
+                    <p class="text-sm text-slate-500">Agent observes environment, user input, and its own state.</p>
+                </div>
+                <div class="flow-arrow hidden md:block">→</div>
+                <div class="flow-arrow md:hidden">↓</div>
+                <div class="flow-step">
+                    <div class="w-20 h-20 bg-[#CAF0F8] rounded-full flex items-center justify-center border-2 border-[#00B4D8]">
+                        <span class="text-3xl">🧠</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mt-2 text-[#0077B6]">2. Planning</h3>
+                    <p class="text-sm text-slate-500">LLM reasons, breaks down goals, and decides on the next action.</p>
+                </div>
+                <div class="flow-arrow hidden md:block">→</div>
+                <div class="flow-arrow md:hidden">↓</div>
+                <div class="flow-step">
+                    <div class="w-20 h-20 bg-[#CAF0F8] rounded-full flex items-center justify-center border-2 border-[#00B4D8]">
+                        <span class="text-3xl">🛠️</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mt-2 text-[#0077B6]">3. Action</h3>
+                    <p class="text-sm text-slate-500">Agent executes a function, calls an API, or uses a tool.</p>
+                </div>
+                <div class="flow-arrow hidden md:block">→</div>
+                <div class="flow-arrow md:hidden">↓</div>
+                <div class="flow-step">
+                    <div class="w-20 h-20 bg-[#CAF0F8] rounded-full flex items-center justify-center border-2 border-[#00B4D8]">
+                        <span class="text-3xl">💾</span>
+                    </div>
+                    <h3 class="font-semibold text-lg mt-2 text-[#0077B6]">4. Memory</h3>
+                    <p class="text-sm text-slate-500">Stores results, learns from actions, and updates world state.</p>
+                </div>
+            </div>
+            <p class="text-slate-600 text-center mt-6">
+                The loop then repeats, feeding the results from Memory back into Perception for the next cycle.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h2 class="text-2xl font-semibold text-[#0077B6] mb-4 text-center">SOP: How to Develop an Autonomous Agent</h2>
+            <p class="text-slate-600 text-center mb-8 max-w-3xl mx-auto">
+                Follow this Standard Operating Procedure (SOP) for a structured approach to agent development, moving from a simple idea to a robust, autonomous system.
+            </p>
+            <ol class="relative border-l border-gray-300">
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#00B4D8] rounded-full -left-4 ring-8 ring-white">
+                        <span class="text-white font-bold">1</span>
+                    </span>
+                    <h3 class="flex items-center mb-1 text-xl font-semibold text-gray-900">Define Goals & Functions</h3>
+                    <p class="text-base font-normal text-gray-500">Clearly identify the agent's purpose. What specific, high-level goals must it achieve? What discrete functions or tools (e.g., `send_email`, `query_database`, `search_web`) will it need to execute?</p>
+                </li>
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#00B4D8] rounded-full -left-4 ring-8 ring-white">
+                        <span class="text-white font-bold">2</span>
+                    </span>
+                    <h3 class="mb-1 text-xl font-semibold text-gray-900">Design Architecture & State</h3>
+                    <p class="text-base font-normal text-gray-500">Choose your core systems: LLM for planning (e.g., Gemini, GPT-4), memory system (e.g., Vector DB), and an agent framework (e.g., LangChain) or custom loop logic. Define the agent's state representation.</p>
+                </li>
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#00B4D8] rounded-full -left-4 ring-8 ring-white">
+                        <span class="text-white font-bold">3</span>
+                    </span>
+                    <h3 class="mb-1 text-xl font-semibold text-gray-900">Implement Core Loop & Tools</h3>
+                    <p class="text-base font-normal text-gray-500">Code the Perception-Planning-Action-Memory loop. Securely implement the function-calling logic and tool integrations. Ensure robust error handling for failed function calls.</p>
+                </li>
+                <li class="mb-10 ml-6">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#00B4D8] rounded-full -left-4 ring-8 ring-white">
+                        <span class="text-white font-bold">4</span>
+                    </span>
+                    <h3 class="mb-1 text-xl font-semibold text-gray-900">Develop Testing & Validation</h3>
+                    <p class="text-base font-normal text-gray-500">Create a test harness. Unit-test individual functions. Integration-test the agent's ability to choose the *correct* function. Test for hallucinations, loops, and failure-recovery (self-correction).</p>
+                </li>
+                <li class="ml-6">
+                    <span class="absolute flex items-center justify-center w-8 h-8 bg-[#00B4D8] rounded-full -left-4 ring-8 ring-white">
+                        <span class="text-white font-bold">5</span>
+                    </span>
+                    <h3 class="mb-1 text-xl font-semibold text-gray-900">Deploy, Monitor & Iterate</h3>
+                    <p class="text-base font-normal text-gray-500">Deploy the agent in a controlled environment. Implement comprehensive logging for its "thoughts" (planning) and actions. Monitor its performance, cost, and unexpected behaviors, then iterate on the prompts, tools, and logic.</p>
+                </li>
+            </ol>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="info-card">
+                <h2 class="text-2xl font-semibold text-[#0077B6] mb-4 text-center">Required Systems: The Tech Stack</h2>
+                <p class="text-slate-600 text-center mb-6">
+                    The agent stack is composed of several key systems. This chart shows the relative importance and adoption of each component in a typical autonomous agent build.
+                </p>
+                <div class="chart-container">
+                    <canvas id="techStackChart"></canvas>
+                </div>
+            </div>
+            <div class="info-card">
+                <h2 class="text-2xl font-semibold text-[#0077B6] mb-4 text-center">Agent Performance Profile</h2>
+                <p class="text-slate-600 text-center mb-6">
+                    Evaluating an agent goes beyond "does it work?" This profile shows key metrics for a well-developed agent, balancing its ability to act with its ability to recover.
+                </p>
+                <div class="chart-container">
+                    <canvas id="agentProfileChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="text-center py-8 text-slate-500">
+        <p>&copy; 2025 AI Agent Development. This infographic is a conceptual SOP.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const wrapLabel = (label, maxChars = 16) => {
+                if (typeof label !== 'string' || label.length <= maxChars) {
+                    return label;
+                }
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).trim().length > maxChars && currentLine.length > 0) {
+                        lines.push(currentLine.trim());
+                        currentLine = word;
+                    } else {
+                        currentLine = (currentLine + ' ' + word).trim();
+                    }
+                });
+                if (currentLine.length > 0) {
+                    lines.push(currentLine.trim());
+                }
+                return lines;
+            };
+
+            const multiLineTooltipCallback = {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    if (Array.isArray(label)) {
+                        return label.join(' ');
+                    } else {
+                        return label;
+                    }
+                }
+            };
+            
+            const chartOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        labels: {
+                            color: '#1E293B'
+                        }
+                    },
+                    tooltip: {
+                        callbacks: multiLineTooltipCallback
+                    }
+                },
+                scales: {
+                    y: {
+                        ticks: { color: '#1E293B' },
+                        grid: { color: 'rgba(0, 0, 0, 0.05)' }
+                    },
+                    x: {
+                        ticks: { color: '#1E293B' },
+                        grid: { color: 'rgba(0, 0, 0, 0.05)' }
+                    }
+                }
+            };
+
+            if (document.getElementById('techStackChart')) {
+                const rawLabels = [
+                    'LLM APIs (Gemini, GPT-4)', 
+                    'Agent Frameworks (LangChain)', 
+                    'Python (Primary Language)', 
+                    'Vector Databases (Memory)', 
+                    'Monitoring & Logging'
+                ];
+                const wrappedLabels = rawLabels.map(label => wrapLabel(label));
+
+                new Chart(document.getElementById('techStackChart'), {
+                    type: 'bar',
+                    data: {
+                        labels: wrappedLabels,
+                        datasets: [{
+                            label: 'Component Importance',
+                            data: [95, 85, 90, 75, 70],
+                            backgroundColor: '#0077B6',
+                            borderColor: '#00B4D8',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        ...chartOptions,
+                        indexAxis: 'y',
+                        scales: {
+                            y: {
+                                ticks: { color: '#1E293B' },
+                                grid: { color: 'rgba(0, 0, 0, 0.05)' }
+                            },
+                            x: {
+                                min: 0,
+                                max: 100,
+                                ticks: { color: '#1E293B' },
+                                grid: { color: 'rgba(0, 0, 0, 0.05)' }
+                            }
+                        }
+                    }
+                });
+            }
+
+            if (document.getElementById('agentProfileChart')) {
+                const rawLabels = [
+                    'Autonomy', 
+                    'Planning', 
+                    'Self-Correction', 
+                    'Tool Use', 
+                    'Memory Fidelity'
+                ];
+                const wrappedLabels = rawLabels.map(label => wrapLabel(label));
+
+                new Chart(document.getElementById('agentProfileChart'), {
+                    type: 'radar',
+                    data: {
+                        labels: wrappedLabels,
+                        datasets: [{
+                            label: 'Advanced Agent Profile',
+                            data: [8, 9, 7, 10, 8],
+                            backgroundColor: 'rgba(0, 119, 182, 0.2)',
+                            borderColor: '#0077B6',
+                            pointBackgroundColor: '#0077B6',
+                            pointBorderColor: '#fff',
+                            pointHoverBackgroundColor: '#fff',
+                            pointHoverBorderColor: '#0077B6'
+                        }]
+                    },
+                    options: {
+                        ...chartOptions,
+                        scales: {
+                            r: {
+                                min: 0,
+                                max: 10,
+                                pointLabels: {
+                                    color: '#1E293B',
+                                    font: {
+                                        size: 13
+                                    }
+                                },
+                                ticks: {
+                                    backdropColor: 'transparent',
+                                    stepSize: 2
+                                },
+                                grid: { color: 'rgba(0, 0, 0, 0.1)' },
+                                angleLines: { color: 'rgba(0, 0, 0, 0.1)' }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>
